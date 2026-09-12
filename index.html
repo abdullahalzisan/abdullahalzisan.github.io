@@ -4,51 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Abdullah Al Zisan | Zisan</title>
+    <title>Abdullah Al Zisan — Zisan | Technology, AI & Business</title>
 
     <meta name="description"
-        content="Official personal website of Abdullah Al Zisan (Zisan) — Technology, AI, Business and Science enthusiast.">
+        content="Official website of Abdullah Al Zisan (Zisan) — a student and technology enthusiast interested in AI, science, business, software and the future.">
 
     <meta name="author" content="Abdullah Al Zisan">
-
-    <!-- Google / Search Engine Identity -->
     <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://abdullahalzisan.github.io/">
 
-    <!-- Social Preview -->
-    <meta property="og:title" content="Abdullah Al Zisan | Zisan">
-    <meta property="og:description"
-        content="Technology, AI, Business and Science enthusiast.">
+    <!-- Open Graph -->
     <meta property="og:type" content="profile">
-    <meta property="og:url"
-        content="https://abdullahalzisan.github.io/">
+    <meta property="og:title" content="Abdullah Al Zisan — Zisan">
+    <meta property="og:description"
+        content="Technology, AI, Science, Business and the future.">
+    <meta property="og:url" content="https://abdullahalzisan.github.io/">
 
-    <!-- Person Structured Data -->
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Abdullah Al Zisan — Zisan">
+    <meta name="twitter:description"
+        content="Technology, AI, Science, Business and the future.">
+
+    <!-- Person structured data -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Abdullah Al Zisan",
-        "alternateName": "Zisan",
-        "url": "https://abdullahalzisan.github.io/",
-        "sameAs": [
-            "YOUR_YOUTUBE_URL",
-            "YOUR_INSTAGRAM_URL",
-            "YOUR_TIKTOK_URL",
-            "YOUR_FACEBOOK_URL",
-            "YOUR_X_URL",
-            "YOUR_LINKEDIN_URL",
-            "YOUR_GITHUB_URL"
-        ]
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://abdullahalzisan.github.io/#person",
+      "name": "Abdullah Al Zisan",
+      "alternateName": "Zisan",
+      "url": "https://abdullahalzisan.github.io/",
+      "sameAs": [
+        "https://www.tiktok.com/@abdullah_al_zisan",
+        "https://www.instagram.com/abdullah_al_zisan_1",
+        "https://x.com/AbdullahAlZisan",
+        "https://www.linkedin.com/in/abdullah-al-zisan-aa14b23b4",
+        "https://www.facebook.com/share/1JkTGhPVZy/",
+        "https://youtube.com/@abdullah_al_zisan",
+        "https://github.com/abdullahalzisan"
+      ]
     }
     </script>
 
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         html {
@@ -56,10 +65,19 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0b0f19;
-            color: #f5f7fa;
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            background: #07090d;
+            color: #f4f7fb;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         a {
@@ -67,418 +85,833 @@
             text-decoration: none;
         }
 
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        ::selection {
+            background: #ffffff;
+            color: #080a0f;
+        }
+
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
         .container {
-            width: min(1100px, 92%);
+            width: min(1120px, 90%);
             margin: auto;
         }
 
-        /* Navigation */
+        .eyebrow {
+            color: #8e9aae;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
 
-        nav {
-            position: sticky;
+        .section {
+            padding: 110px 0;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(34px, 5vw, 54px);
+            line-height: 1.08;
+            letter-spacing: -1.8px;
+            margin-bottom: 18px;
+        }
+
+        .section-heading p {
+            color: #929caf;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .nav {
+            position: fixed;
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 1000;
-            background: rgba(11, 15, 25, 0.92);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #202738;
+
+            background: rgba(7, 9, 13, 0.78);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.07);
         }
 
         .nav-inner {
-            min-height: 70px;
+            min-height: 72px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
-        .logo {
-            font-size: 21px;
+        .brand {
+            font-size: 17px;
             font-weight: 800;
-            letter-spacing: 0.5px;
+            letter-spacing: -0.3px;
         }
 
-        .logo span {
-            color: #6ea8fe;
+        .brand span {
+            color: #9ca9bb;
         }
 
         .nav-links {
             display: flex;
-            gap: 22px;
+            gap: 27px;
             list-style: none;
         }
 
         .nav-links a {
-            color: #c7cfdb;
+            color: #aab4c4;
             font-size: 14px;
+            transition: 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: #ffffff;
+            color: white;
         }
 
-        /* Hero */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
-            min-height: 88vh;
+            min-height: 100vh;
+
             display: flex;
             align-items: center;
-            text-align: center;
+
+            position: relative;
+            overflow: hidden;
+
+            padding-top: 72px;
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+            width: 650px;
+            height: 650px;
+
+            top: -250px;
+            right: -200px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(90, 120, 255, 0.17),
+                    transparent 68%
+                );
+
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: "";
+
+            position: absolute;
+            width: 500px;
+            height: 500px;
+
+            bottom: -250px;
+            left: -200px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(150, 90, 255, 0.10),
+                    transparent 70%
+                );
+
+            pointer-events: none;
         }
 
         .hero-content {
-            width: 100%;
+            position: relative;
+            z-index: 2;
         }
 
         .hero h1 {
-            font-size: clamp(42px, 9vw, 82px);
-            line-height: 1.05;
-            margin-bottom: 18px;
+            max-width: 900px;
+
+            font-size: clamp(54px, 10vw, 105px);
+            line-height: 0.96;
+            letter-spacing: -5px;
+
+            margin-bottom: 28px;
         }
 
         .hero h1 span {
-            color: #6ea8fe;
+            color: #8d9cff;
         }
 
-        .hero-subtitle {
-            font-size: clamp(18px, 3vw, 25px);
-            color: #c7cfdb;
-            margin-bottom: 14px;
+        .hero-lead {
+            max-width: 690px;
+
+            color: #a5afbf;
+            font-size: clamp(18px, 2.5vw, 23px);
+
+            margin-bottom: 34px;
         }
 
-        .hero-description {
-            max-width: 650px;
-            margin: auto;
-            color: #8f9bad;
-            font-size: 16px;
-        }
-
-        .buttons {
-            margin-top: 30px;
+        .hero-buttons {
             display: flex;
-            justify-content: center;
-            gap: 14px;
+            gap: 13px;
             flex-wrap: wrap;
         }
 
         .button {
-            padding: 12px 22px;
-            border-radius: 8px;
-            border: 1px solid #30394c;
-            background: #151c2b;
-            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 21px;
+
+            border-radius: 9px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease,
+                border 0.2s ease;
         }
 
         .button:hover {
             transform: translateY(-2px);
-            background: #202a3d;
         }
 
-        .button.primary {
-            background: #6ea8fe;
-            color: #08101e;
-            border-color: #6ea8fe;
-            font-weight: 700;
+        .button-primary {
+            background: white;
+            color: #080a0f;
         }
 
-        /* Sections */
-
-        section {
-            padding: 90px 0;
+        .button-primary:hover {
+            background: #e9edf4;
         }
 
-        .section-title {
-            font-size: 34px;
-            margin-bottom: 18px;
-        }
-
-        .section-text {
-            max-width: 750px;
-            color: #aab4c3;
-        }
-
-        /* Cards */
-
-        .cards {
-            margin-top: 35px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .card {
-            background: #121927;
-            border: 1px solid #242e40;
-            border-radius: 14px;
-            padding: 25px;
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #929daf;
-            font-size: 15px;
-        }
-
-        /* Social */
-
-        .social-grid {
-            margin-top: 35px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 14px;
-        }
-
-        .social {
-            padding: 17px;
-            text-align: center;
-            background: #121927;
-            border: 1px solid #242e40;
-            border-radius: 10px;
-            color: #c7cfdb;
-            transition: 0.2s;
-        }
-
-        .social:hover {
-            transform: translateY(-3px);
-            border-color: #6ea8fe;
+        .button-secondary {
+            background: rgba(255,255,255,0.04);
             color: white;
         }
 
-        /* Footer */
+        .button-secondary:hover {
+            background: rgba(255,255,255,0.08);
+        }
 
-        footer {
-            border-top: 1px solid #202738;
-            padding: 30px 0;
-            text-align: center;
-            color: #707b8d;
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.4fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .identity-card {
+            background: linear-gradient(
+                145deg,
+                rgba(255,255,255,0.06),
+                rgba(255,255,255,0.015)
+            );
+
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 18px;
+
+            padding: 30px;
+        }
+
+        .avatar {
+            width: 105px;
+            height: 105px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dfe5ff,
+                    #6674ff
+                );
+
+            color: #080a0f;
+
+            font-size: 31px;
+            font-weight: 900;
+
+            margin-bottom: 22px;
+        }
+
+        .identity-card h3 {
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .identity-card p {
+            color: #8994a7;
             font-size: 14px;
         }
 
-        /* Mobile */
+        .about-text p {
+            color: #a5afbf;
+            font-size: 18px;
+            margin-bottom: 22px;
+        }
 
-        @media (max-width: 750px) {
+        .about-text strong {
+            color: white;
+        }
+
+
+        /* =========================
+           INTERESTS
+        ========================= */
+
+        .interest-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .interest-card {
+            padding: 29px;
+
+            border-radius: 15px;
+
+            background: #0d1119;
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            transition:
+                transform 0.25s ease,
+                border 0.25s ease;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255,255,255,0.18);
+        }
+
+        .interest-number {
+            color: #65718a;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 28px;
+        }
+
+        .interest-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .interest-card p {
+            color: #858fa1;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           SOCIAL
+        ========================= */
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .social-card {
+            min-height: 100px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 20px 23px;
+
+            border-radius: 13px;
+
+            background: #0d1119;
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease,
+                border 0.2s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-4px);
+            background: #111722;
+            border-color: rgba(255,255,255,0.18);
+        }
+
+        .social-name {
+            font-weight: 750;
+        }
+
+        .social-handle {
+            color: #727d90;
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+        .arrow {
+            color: #7f8ba0;
+            font-size: 19px;
+        }
+
+
+        /* =========================
+           FUTURE / VISION
+        ========================= */
+
+        .vision {
+            position: relative;
+
+            padding: 70px 55px;
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111827,
+                    #090c13
+                );
+
+            border: 1px solid rgba(255,255,255,0.09);
+        }
+
+        .vision::after {
+            content: "";
+
+            position: absolute;
+
+            width: 380px;
+            height: 380px;
+
+            right: -180px;
+            top: -180px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(112, 126, 255, 0.20),
+                    transparent 68%
+                );
+        }
+
+        .vision h2 {
+            position: relative;
+            z-index: 2;
+
+            max-width: 750px;
+
+            font-size: clamp(32px, 5vw, 58px);
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 20px;
+        }
+
+        .vision p {
+            position: relative;
+            z-index: 2;
+
+            max-width: 700px;
+
+            color: #9ba6b7;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 55px 0 35px;
+
+            border-top: 1px solid rgba(255,255,255,0.07);
+
+            color: #6f7a8d;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+
+            margin-bottom: 40px;
+        }
+
+        .footer-name {
+            color: white;
+            font-weight: 800;
+            margin-bottom: 7px;
+        }
+
+        .footer-description {
+            max-width: 390px;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
 
             .nav-links {
                 display: none;
             }
 
-            .hero {
-                min-height: 80vh;
+            .hero h1 {
+                letter-spacing: -3px;
             }
 
-            section {
-                padding: 65px 0;
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
             }
 
-            .cards {
+            .interest-grid {
                 grid-template-columns: 1fr;
             }
 
             .social-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
+            }
+
+            .vision {
+                padding: 45px 28px;
+            }
+
+            .footer-top {
+                flex-direction: column;
             }
         }
+
+
+        @media (max-width: 500px) {
+
+            .container {
+                width: 88%;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .hero {
+                min-height: 92vh;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .hero-lead {
+                font-size: 17px;
+            }
+
+            .button {
+                width: 100%;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- Navigation -->
 
-    <nav>
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav class="nav">
+
         <div class="container nav-inner">
 
-            <a class="logo" href="#">
+            <a href="#" class="brand">
                 Abdullah <span>Al Zisan</span>
             </a>
 
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#interests">Interests</a></li>
-                <li><a href="#social">Social</a></li>
-                <li><a href="#future">Future</a></li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#interests">Interests</a>
+                </li>
+
+                <li>
+                    <a href="#social">Social</a>
+                </li>
+
+                <li>
+                    <a href="#vision">Vision</a>
+                </li>
+
             </ul>
 
         </div>
+
     </nav>
 
 
-    <!-- Hero -->
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <header class="hero">
+
         <div class="container hero-content">
 
+            <div class="eyebrow">
+                Official Personal Website
+            </div>
+
             <h1>
-                Abdullah <span>Al Zisan</span>
+                Abdullah <span>Al Zisan.</span>
             </h1>
 
-            <p class="hero-subtitle">
-                Technology • AI • Business • Science
+            <p class="hero-lead">
+                Exploring technology, artificial intelligence,
+                science, business and the possibilities of tomorrow.
             </p>
 
-            <p class="hero-description">
-                Welcome to the official personal website of Abdullah Al Zisan,
-                also known as Zisan.
-            </p>
+            <div class="hero-buttons">
 
-            <div class="buttons">
-                <a class="button primary" href="#about">
-                    Explore
+                <a
+                    href="#about"
+                    class="button button-primary">
+                    Explore My Story
                 </a>
 
-                <a class="button" href="#social">
+                <a
+                    href="#social"
+                    class="button button-secondary">
                     Find Me Online
                 </a>
+
             </div>
 
         </div>
+
     </header>
 
 
-    <!-- About -->
 
-    <section id="about">
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="section" id="about">
+
         <div class="container">
 
-            <h2 class="section-title">
-                About Me
-            </h2>
+            <div class="section-heading">
 
-            <p class="section-text">
-                I am Abdullah Al Zisan, also known as Zisan.
-                I am interested in technology, artificial intelligence,
-                science, business and the future of innovation.
-                This website serves as my personal digital identity
-                and a central place for my public profiles and projects.
-            </p>
-
-        </div>
-    </section>
-
-
-    <!-- Interests -->
-
-    <section id="interests">
-        <div class="container">
-
-            <h2 class="section-title">
-                My Interests
-            </h2>
-
-            <div class="cards">
-
-                <div class="card">
-                    <h3>Artificial Intelligence</h3>
-                    <p>
-                        Exploring AI, machine learning and the future
-                        of intelligent systems.
-                    </p>
+                <div class="eyebrow">
+                    About
                 </div>
 
-                <div class="card">
-                    <h3>Technology</h3>
+                <h2>
+                    Building knowledge before building things.
+                </h2>
+
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <div class="identity-card">
+
+                    <div class="avatar">
+                        AZ
+                    </div>
+
+                    <h3>
+                        Abdullah Al Zisan
+                    </h3>
+
                     <p>
-                        Learning about software, emerging technologies,
-                        robotics and the digital world.
+                        Also known as <strong>Zisan</strong>
                     </p>
+
                 </div>
 
-                <div class="card">
-                    <h3>Business</h3>
+
+                <div class="about-text">
+
                     <p>
-                        Interested in entrepreneurship, innovation,
-                        economics and building useful products.
+                        I am <strong>Abdullah Al Zisan</strong>,
+                        also known as <strong>Zisan</strong>.
+                        I am a student with a strong interest in
+                        technology, artificial intelligence,
+                        science, business and entrepreneurship.
                     </p>
+
+                    <p>
+                        I use this website as my central digital
+                        identity — a place where people can discover
+                        my public profiles, projects, ideas and future work.
+                    </p>
+
+                    <p>
+                        My long-term goal is to keep learning,
+                        build useful technology and eventually
+                        create products and companies that solve
+                        meaningful problems.
+                    </p>
+
                 </div>
 
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- Social Profiles -->
 
-    <section id="social">
+    <!-- =========================
+         INTERESTS
+    ========================= -->
+
+    <section class="section" id="interests">
+
         <div class="container">
 
-            <h2 class="section-title">
-                Find Me Online
-            </h2>
+            <div class="section-heading">
 
-            <p class="section-text">
-                My public profiles across the web.
-            </p>
+                <div class="eyebrow">
+                    Areas of Interest
+                </div>
 
-            <div class="social-grid">
+                <h2>
+                    The subjects that keep me curious.
+                </h2>
 
-                <a class="social" href="YOUR_YOUTUBE_URL" target="_blank">
-                    YouTube
-                </a>
-
-                <a class="social" href="YOUR_INSTAGRAM_URL" target="_blank">
-                    Instagram
-                </a>
-
-                <a class="social" href="YOUR_TIKTOK_URL" target="_blank">
-                    TikTok
-                </a>
-
-                <a class="social" href="YOUR_FACEBOOK_URL" target="_blank">
-                    Facebook
-                </a>
-
-                <a class="social" href="YOUR_X_URL" target="_blank">
-                    X
-                </a>
-
-                <a class="social" href="YOUR_LINKEDIN_URL" target="_blank">
-                    LinkedIn
-                </a>
-
-                <a class="social" href="YOUR_GITHUB_URL" target="_blank">
-                    GitHub
-                </a>
+                <p>
+                    Curiosity is the starting point. Skills,
+                    experimentation and execution come next.
+                </p>
 
             </div>
 
-        </div>
-    </section>
+
+            <div class="interest-grid">
 
 
-    <!-- Future -->
+                <article class="interest-card">
 
-    <section id="future">
-        <div class="container">
+                    <div class="interest-number">
+                        01
+                    </div>
 
-            <h2 class="section-title">
-                Looking Ahead
-            </h2>
+                    <h3>
+                        Artificial Intelligence
+                    </h3>
 
-            <p class="section-text">
-                This website will gradually become a home for my projects,
-                ideas, experiments and future work in technology and
-                entrepreneurship.
-            </p>
+                    <p>
+                        Exploring AI, machine learning,
+                        intelligent systems and the future
+                        of human–AI collaboration.
+                    </p>
 
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-
-    <footer>
-        <div class="container">
-            © <span id="year"></span> Abdullah Al Zisan. All rights reserved.
-        </div>
-    </footer>
+                </article>
 
 
-    <script>
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
-    </script>
+                <article class="interest-card">
 
-</body>
-  </html>
+                    <div class="interest-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Technology
+                    </h3>
+
+                    <p>
+                        Software, programming, emerging
+                        technologies, robotics and digital
+                        products.
+                    </p>
+
+                </article>
+
+
+                <article class="interest-card">
+
+                    <div class="interest-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Science
+                    </h3>
+
+      
