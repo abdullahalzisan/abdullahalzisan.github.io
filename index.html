@@ -1,917 +1,798 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Abdullah Al Zisan — Zisan | Technology, AI & Business</title>
-
-    <meta name="description"
-        content="Official website of Abdullah Al Zisan (Zisan) — a student and technology enthusiast interested in AI, science, business, software and the future.">
-
-    <meta name="author" content="Abdullah Al Zisan">
-    <meta name="robots" content="index, follow">
-
-    <link rel="canonical" href="https://abdullahalzisan.github.io/">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="Abdullah Al Zisan — Zisan">
-    <meta property="og:description"
-        content="Technology, AI, Science, Business and the future.">
-    <meta property="og:url" content="https://abdullahalzisan.github.io/">
-
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Abdullah Al Zisan — Zisan">
-    <meta name="twitter:description"
-        content="Technology, AI, Science, Business and the future.">
-
-    <!-- Person structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "@id": "https://abdullahalzisan.github.io/#person",
-      "name": "Abdullah Al Zisan",
-      "alternateName": "Zisan",
-      "url": "https://abdullahalzisan.github.io/",
-      "sameAs": [
-        "https://www.tiktok.com/@abdullah_al_zisan",
-        "https://www.instagram.com/abdullah_al_zisan_1",
-        "https://x.com/AbdullahAlZisan",
-        "https://www.linkedin.com/in/abdullah-al-zisan-aa14b23b4",
-        "https://www.facebook.com/share/1JkTGhPVZy/",
-        "https://youtube.com/@abdullah_al_zisan",
-        "https://github.com/abdullahalzisan"
-      ]
-    }
-    </script>
-
-    <style>
-
-        /* =========================
-           RESET
-        ========================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family:
-                Inter,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Arial,
-                sans-serif;
-
-            background: #07090d;
-            color: #f4f7fb;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        ::selection {
-            background: #ffffff;
-            color: #080a0f;
-        }
-
-
-        /* =========================
-           GLOBAL
-        ========================= */
-
-        .container {
-            width: min(1120px, 90%);
-            margin: auto;
-        }
-
-        .eyebrow {
-            color: #8e9aae;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-
-        .section {
-            padding: 110px 0;
-        }
-
-        .section-heading {
-            max-width: 720px;
-            margin-bottom: 45px;
-        }
-
-        .section-heading h2 {
-            font-size: clamp(34px, 5vw, 54px);
-            line-height: 1.08;
-            letter-spacing: -1.8px;
-            margin-bottom: 18px;
-        }
-
-        .section-heading p {
-            color: #929caf;
-            font-size: 17px;
-        }
-
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-
-            background: rgba(7, 9, 13, 0.78);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-
-            border-bottom: 1px solid rgba(255,255,255,0.07);
-        }
-
-        .nav-inner {
-            min-height: 72px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .brand {
-            font-size: 17px;
-            font-weight: 800;
-            letter-spacing: -0.3px;
-        }
-
-        .brand span {
-            color: #9ca9bb;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 27px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #aab4c4;
-            font-size: 14px;
-            transition: 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: white;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 100vh;
-
-            display: flex;
-            align-items: center;
-
-            position: relative;
-            overflow: hidden;
-
-            padding-top: 72px;
-        }
-
-        .hero::before {
-            content: "";
-
-            position: absolute;
-            width: 650px;
-            height: 650px;
-
-            top: -250px;
-            right: -200px;
-
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(90, 120, 255, 0.17),
-                    transparent 68%
-                );
-
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: "";
-
-            position: absolute;
-            width: 500px;
-            height: 500px;
-
-            bottom: -250px;
-            left: -200px;
-
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(150, 90, 255, 0.10),
-                    transparent 70%
-                );
-
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            max-width: 900px;
-
-            font-size: clamp(54px, 10vw, 105px);
-            line-height: 0.96;
-            letter-spacing: -5px;
-
-            margin-bottom: 28px;
-        }
-
-        .hero h1 span {
-            color: #8d9cff;
-        }
-
-        .hero-lead {
-            max-width: 690px;
-
-            color: #a5afbf;
-            font-size: clamp(18px, 2.5vw, 23px);
-
-            margin-bottom: 34px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 13px;
-            flex-wrap: wrap;
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            padding: 13px 21px;
-
-            border-radius: 9px;
-
-            font-size: 14px;
-            font-weight: 700;
-
-            border: 1px solid rgba(255,255,255,0.12);
-
-            transition:
-                transform 0.2s ease,
-                background 0.2s ease,
-                border 0.2s ease;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-        }
-
-        .button-primary {
-            background: white;
-            color: #080a0f;
-        }
-
-        .button-primary:hover {
-            background: #e9edf4;
-        }
-
-        .button-secondary {
-            background: rgba(255,255,255,0.04);
-            color: white;
-        }
-
-        .button-secondary:hover {
-            background: rgba(255,255,255,0.08);
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 0.9fr 1.4fr;
-            gap: 70px;
-            align-items: start;
-        }
-
-        .identity-card {
-            background: linear-gradient(
-                145deg,
-                rgba(255,255,255,0.06),
-                rgba(255,255,255,0.015)
-            );
-
-            border: 1px solid rgba(255,255,255,0.09);
-            border-radius: 18px;
-
-            padding: 30px;
-        }
-
-        .avatar {
-            width: 105px;
-            height: 105px;
-
-            border-radius: 50%;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #dfe5ff,
-                    #6674ff
-                );
-
-            color: #080a0f;
-
-            font-size: 31px;
-            font-weight: 900;
-
-            margin-bottom: 22px;
-        }
-
-        .identity-card h3 {
-            font-size: 25px;
-            margin-bottom: 5px;
-        }
-
-        .identity-card p {
-            color: #8994a7;
-            font-size: 14px;
-        }
-
-        .about-text p {
-            color: #a5afbf;
-            font-size: 18px;
-            margin-bottom: 22px;
-        }
-
-        .about-text strong {
-            color: white;
-        }
-
-
-        /* =========================
-           INTERESTS
-        ========================= */
-
-        .interest-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .interest-card {
-            padding: 29px;
-
-            border-radius: 15px;
-
-            background: #0d1119;
-
-            border: 1px solid rgba(255,255,255,0.08);
-
-            transition:
-                transform 0.25s ease,
-                border 0.25s ease;
-        }
-
-        .interest-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255,255,255,0.18);
-        }
-
-        .interest-number {
-            color: #65718a;
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            margin-bottom: 28px;
-        }
-
-        .interest-card h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
-
-        .interest-card p {
-            color: #858fa1;
-            font-size: 15px;
-        }
-
-
-        /* =========================
-           SOCIAL
-        ========================= */
-
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
-
-        .social-card {
-            min-height: 100px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 20px 23px;
-
-            border-radius: 13px;
-
-            background: #0d1119;
-
-            border: 1px solid rgba(255,255,255,0.08);
-
-            transition:
-                transform 0.2s ease,
-                background 0.2s ease,
-                border 0.2s ease;
-        }
-
-        .social-card:hover {
-            transform: translateY(-4px);
-            background: #111722;
-            border-color: rgba(255,255,255,0.18);
-        }
-
-        .social-name {
-            font-weight: 750;
-        }
-
-        .social-handle {
-            color: #727d90;
-            font-size: 12px;
-            margin-top: 3px;
-        }
-
-        .arrow {
-            color: #7f8ba0;
-            font-size: 19px;
-        }
-
-
-        /* =========================
-           FUTURE / VISION
-        ========================= */
-
-        .vision {
-            position: relative;
-
-            padding: 70px 55px;
-
-            border-radius: 22px;
-
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #111827,
-                    #090c13
-                );
-
-            border: 1px solid rgba(255,255,255,0.09);
-        }
-
-        .vision::after {
-            content: "";
-
-            position: absolute;
-
-            width: 380px;
-            height: 380px;
-
-            right: -180px;
-            top: -180px;
-
-            border-radius: 50%;
-
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(112, 126, 255, 0.20),
-                    transparent 68%
-                );
-        }
-
-        .vision h2 {
-            position: relative;
-            z-index: 2;
-
-            max-width: 750px;
-
-            font-size: clamp(32px, 5vw, 58px);
-            line-height: 1.05;
-
-            letter-spacing: -2px;
-
-            margin-bottom: 20px;
-        }
-
-        .vision p {
-            position: relative;
-            z-index: 2;
-
-            max-width: 700px;
-
-            color: #9ba6b7;
-            font-size: 17px;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            padding: 55px 0 35px;
-
-            border-top: 1px solid rgba(255,255,255,0.07);
-
-            color: #6f7a8d;
-        }
-
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-
-            margin-bottom: 40px;
-        }
-
-        .footer-name {
-            color: white;
-            font-weight: 800;
-            margin-bottom: 7px;
-        }
-
-        .footer-description {
-            max-width: 390px;
-            font-size: 14px;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            font-size: 13px;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .copyright {
-            padding-top: 25px;
-            border-top: 1px solid rgba(255,255,255,0.06);
-            font-size: 12px;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 800px) {
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                letter-spacing: -3px;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 35px;
-            }
-
-            .interest-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .social-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .vision {
-                padding: 45px 28px;
-            }
-
-            .footer-top {
-                flex-direction: column;
-            }
-        }
-
-
-        @media (max-width: 500px) {
-
-            .container {
-                width: 88%;
-            }
-
-            .section {
-                padding: 80px 0;
-            }
-
-            .hero {
-                min-height: 92vh;
-            }
-
-            .hero h1 {
-                font-size: 55px;
-            }
-
-            .hero-lead {
-                font-size: 17px;
-            }
-
-            .button {
-                width: 100%;
-            }
-        }
-
-    </style>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Abdullah Al Zisan | Personal Website</title>
+
+<meta name="description" content="Official personal website of Abdullah Al Zisan — exploring AI, technology, science, business, software and the future.">
+
+<meta name="author" content="Abdullah Al Zisan">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://abdullahalzisan.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Abdullah Al Zisan | Personal Website">
+<meta property="og:description" content="The official personal website and digital identity of Abdullah Al Zisan.">
+<meta property="og:url" content="https://abdullahalzisan.github.io/">
+<meta property="og:site_name" content="Abdullah Al Zisan">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Abdullah Al Zisan">
+<meta name="twitter:description" content="Personal website and digital identity of Abdullah Al Zisan.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://abdullahalzisan.github.io/",
+  "name": "Abdullah Al Zisan",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Abdullah Al Zisan",
+    "alternateName": "Zisan",
+    "url": "https://abdullahalzisan.github.io/",
+    "sameAs": [
+      "https://www.youtube.com/@abdullah_al_zisan",
+      "https://www.instagram.com/abdullah_al_zisan_1/",
+      "https://www.tiktok.com/@abdullah_al_zisan",
+      "https://x.com/AbdullahAlZisan",
+      "https://www.linkedin.com/in/abdullah-al-zisan-aa14b23b4",
+      "https://www.facebook.com/share/1JkTGhPVZy/",
+      "https://github.com/abdullahalzisan"
+    ]
+  }
+}
+</script>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#07090d;
+  color:#f4f6f8;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+section{
+  padding:100px 0;
+}
+
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,9,13,.82);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.nav-inner{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:-.5px;
+}
+
+.logo span{
+  opacity:.55;
+}
+
+.nav-links{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+.nav-links a{
+  color:#aeb6c2;
+  font-size:14px;
+  transition:.25s;
+}
+
+.nav-links a:hover{
+  color:#fff;
+}
+
+.hero{
+  min-height:calc(100vh - 72px);
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  background:rgba(100,120,255,.10);
+  filter:blur(100px);
+  top:-180px;
+  right:-150px;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:350px;
+  height:350px;
+  border-radius:50%;
+  background:rgba(0,200,255,.06);
+  filter:blur(90px);
+  bottom:-150px;
+  left:-100px;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:850px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  padding:7px 13px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50px;
+  color:#aeb6c2;
+  font-size:12px;
+  margin-bottom:25px;
+  background:rgba(255,255,255,.025);
+}
+
+.hero h1{
+  font-size:clamp(48px,8vw,92px);
+  line-height:1;
+  letter-spacing:-4px;
+  margin-bottom:28px;
+}
+
+.gradient-text{
+  background:linear-gradient(90deg,#fff,#8f9cff,#70d9ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  max-width:700px;
+  color:#aeb6c2;
+  font-size:18px;
+  margin-bottom:35px;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 20px;
+  border-radius:10px;
+  font-weight:700;
+  font-size:14px;
+  border:1px solid rgba(255,255,255,.12);
+  transition:.25s;
+}
+
+.btn-primary{
+  background:#fff;
+  color:#080a0f;
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px);
+  background:#e9edf2;
+}
+
+.btn-secondary{
+  background:rgba(255,255,255,.03);
+  color:#fff;
+}
+
+.btn-secondary:hover{
+  background:rgba(255,255,255,.08);
+  transform:translateY(-2px);
+}
+
+.section-label{
+  color:#7e8cff;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.section-title{
+  font-size:clamp(32px,5vw,55px);
+  line-height:1.1;
+  letter-spacing:-2px;
+  margin-bottom:20px;
+}
+
+.section-description{
+  color:#9ca5b1;
+  max-width:700px;
+}
+
+.card{
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:28px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(255,255,255,.16);
+  background:rgba(255,255,255,.05);
+}
+
+.grid{
+  display:grid;
+  gap:20px;
+}
+
+.grid-2{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.grid-3{
+  grid-template-columns:repeat(3,1fr);
+}
+
+.tag{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:8px;
+  background:rgba(255,255,255,.06);
+  color:#b9c1cc;
+  font-size:12px;
+  margin:4px 4px 0 0;
+}
+
+@media(max-width:800px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero{
+    min-height:80vh;
+  }
+
+  .hero h1{
+    letter-spacing:-2.5px;
+  }
+
+  .grid-2,
+  .grid-3{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:75px 0;
+  }
+
+}
+
+</style>
 </head>
-
 
 <body>
 
+<nav class="navbar">
+  <div class="container nav-inner">
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+    <a href="#home" class="logo">
+      Abdullah <span>Al Zisan</span>
+    </a>
 
-    <nav class="nav">
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#focus">Focus</a>
+      <a href="#identity">Identity</a>
+      <a href="#social">Social</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-        <div class="container nav-inner">
+  </div>
+</nav>
 
-            <a href="#" class="brand">
-                Abdullah <span>Al Zisan</span>
-            </a>
+<main>
 
-            <ul class="nav-links">
+<section class="hero" id="home">
 
-                <li>
-                    <a href="#about">About</a>
-                </li>
+  <div class="container">
 
-                <li>
-                    <a href="#interests">Interests</a>
-                </li>
+    <div class="hero-content">
 
-                <li>
-                    <a href="#social">Social</a>
-                </li>
+      <div class="eyebrow">
+        Personal Website · Digital Identity
+      </div>
 
-                <li>
-                    <a href="#vision">Vision</a>
-                </li>
+      <h1>
+        Abdullah Al<br>
+        <span class="gradient-text">Zisan</span>
+      </h1>
 
-            </ul>
-
-        </div>
-
-    </nav>
-
-
-
-    <!-- =========================
-         HERO
-    ========================= -->
-
-    <header class="hero">
-
-        <div class="container hero-content">
-
-            <div class="eyebrow">
-                Official Personal Website
-            </div>
-
-            <h1>
-                Abdullah <span>Al Zisan.</span>
-            </h1>
-
-            <p class="hero-lead">
-                Exploring technology, artificial intelligence,
-                science, business and the possibilities of tomorrow.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a
-                    href="#about"
-                    class="button button-primary">
-                    Explore My Story
-                </a>
-
-                <a
-                    href="#social"
-                    class="button button-secondary">
-                    Find Me Online
-                </a>
-
-            </div>
-
-        </div>
-
-    </header>
-
-
-
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
-    <section class="section" id="about">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <div class="eyebrow">
-                    About
-                </div>
-
-                <h2>
-                    Building knowledge before building things.
-                </h2>
-
-            </div>
-
-
-            <div class="about-grid">
-
-
-                <div class="identity-card">
-
-                    <div class="avatar">
-                        AZ
-                    </div>
-
-                    <h3>
-                        Abdullah Al Zisan
-                    </h3>
-
-                    <p>
-                        Also known as <strong>Zisan</strong>
-                    </p>
-
-                </div>
-
-
-                <div class="about-text">
-
-                    <p>
-                        I am <strong>Abdullah Al Zisan</strong>,
-                        also known as <strong>Zisan</strong>.
-                        I am a student with a strong interest in
-                        technology, artificial intelligence,
-                        science, business and entrepreneurship.
-                    </p>
-
-                    <p>
-                        I use this website as my central digital
-                        identity — a place where people can discover
-                        my public profiles, projects, ideas and future work.
-                    </p>
-
-                    <p>
-                        My long-term goal is to keep learning,
-                        build useful technology and eventually
-                        create products and companies that solve
-                        meaningful problems.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         INTERESTS
-    ========================= -->
-
-    <section class="section" id="interests">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <div class="eyebrow">
-                    Areas of Interest
-                </div>
-
-                <h2>
-                    The subjects that keep me curious.
-                </h2>
-
-                <p>
-                    Curiosity is the starting point. Skills,
-                    experimentation and execution come next.
-                </p>
-
-            </div>
-
-
-            <div class="interest-grid">
-
-
-                <article class="interest-card">
-
-                    <div class="interest-number">
-                        01
-                    </div>
-
-                    <h3>
-                        Artificial Intelligence
-                    </h3>
-
-                    <p>
-                        Exploring AI, machine learning,
-                        intelligent systems and the future
-                        of human–AI collaboration.
-                    </p>
-
-                </article>
-
-
-                <article class="interest-card">
-
-                    <div class="interest-number">
-                        02
-                    </div>
-
-                    <h3>
-                        Technology
-                    </h3>
-
-                    <p>
-                        Software, programming, emerging
-                        technologies, robotics and digital
-                        products.
-                    </p>
-
-                </article>
-
-
-                <article class="interest-card">
-
-                    <div class="interest-number">
-                        03
-                    </div>
-
-                    <h3>
-                        Science
-                    </h3>
-
-      
+      <p>
+        Exploring the intersection of artificial intelligence,
+        technology, science, software, business and the future.
+        This is my personal space on the web.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#about" class="btn btn-primary">
+          Explore My World →
+        </a>
+
+        <a href="#social" class="btn btn-secondary">
+          Find Me Online
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+    </section><section id="about">
+  <div class="container">
+
+    <div class="section-label">About</div>
+
+    <h2 class="section-title">
+      Curiosity is where<br>
+      everything begins.
+    </h2>
+
+    <p class="section-description">
+      I’m Abdullah Al Zisan, also known as Zisan. I’m interested in
+      understanding how technology is changing the world and how
+      ideas can be transformed into useful products and businesses.
+    </p>
+
+    <div class="grid grid-2" style="margin-top:40px;">
+
+      <div class="card">
+        <h3>Who I Am</h3>
+        <p style="color:#9ca5b1;margin-top:12px;">
+          A student, learner and technology enthusiast who enjoys
+          exploring new ideas, building things and learning from
+          the rapidly changing world around us.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>How I Think</h3>
+        <p style="color:#9ca5b1;margin-top:12px;">
+          I value curiosity, independent thinking, continuous
+          learning and the ability to turn knowledge into action.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="focus">
+  <div class="container">
+
+    <div class="section-label">Areas of Interest</div>
+
+    <h2 class="section-title">
+      What I’m exploring.
+    </h2>
+
+    <p class="section-description">
+      These are some of the fields that currently attract my
+      attention and shape the direction of my learning.
+    </p>
+
+    <div class="grid grid-3" style="margin-top:40px;">
+
+      <div class="card">
+        <div style="font-size:30px;">AI</div>
+        <h3 style="margin-top:15px;">Artificial Intelligence</h3>
+        <p style="color:#9ca5b1;margin-top:10px;">
+          Exploring AI, machine learning, intelligent systems and
+          the future possibilities of advanced technology.
+        </p>
+      </div>
+
+      <div class="card">
+        <div style="font-size:30px;">⚡</div>
+        <h3 style="margin-top:15px;">Technology</h3>
+        <p style="color:#9ca5b1;margin-top:10px;">
+          Following emerging technologies, software, computing,
+          robotics and the ideas shaping tomorrow.
+        </p>
+      </div>
+
+      <div class="card">
+        <div style="font-size:30px;">🔬</div>
+        <h3 style="margin-top:15px;">Science</h3>
+        <p style="color:#9ca5b1;margin-top:10px;">
+          Learning about science, space, discoveries and the
+          deeper questions behind our understanding of reality.
+        </p>
+      </div>
+
+      <div class="card">
+        <div style="font-size:30px;">💼</div>
+        <h3 style="margin-top:15px;">Business</h3>
+        <p style="color:#9ca5b1;margin-top:10px;">
+          Interested in entrepreneurship, business strategy,
+          markets, finance and building valuable products.
+        </p>
+      </div>
+
+      <div class="card">
+        <div style="font-size:30px;">💻</div>
+        <h3 style="margin-top:15px;">Software</h3>
+        <p style="color:#9ca5b1;margin-top:10px;">
+          Learning programming and exploring how software can
+          turn ideas into practical experiences.
+        </p>
+      </div>
+
+      <div class="card">
+        <div style="font-size:30px;">🚀</div>
+        <h3 style="margin-top:15px;">Future</h3>
+        <p style="color:#9ca5b1;margin-top:10px;">
+          Thinking about the long-term impact of technology and
+          the possibilities of the next generation.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="identity">
+  <div class="container">
+
+    <div class="section-label">Digital Identity</div>
+
+    <h2 class="section-title">
+      One name.<br>
+      One digital identity.
+    </h2>
+
+    <p class="section-description">
+      This website acts as a central hub for my public presence
+      across the internet. It connects my different platforms
+      under one consistent identity.
+    </p>
+
+    <div class="card" style="margin-top:40px;">
+
+      <h3>Abdullah Al Zisan</h3>
+
+      <p style="color:#9ca5b1;margin-top:10px;">
+        Also known as <strong style="color:#fff;">Zisan</strong>.
+      </p>
+
+      <div style="margin-top:20px;">
+
+        <span class="tag">AI</span>
+        <span class="tag">Technology</span>
+        <span class="tag">Science</span>
+        <span class="tag">Software</span>
+        <span class="tag">Business</span>
+        <span class="tag">Future Tech</span>
+        <span class="tag">Learning</span>
+
+      </div>
+
+    </div>
+
+  </div>
+</section><section id="social">
+  <div class="container">
+
+    <div class="section-label">Social Presence</div>
+
+    <h2 class="section-title">
+      Find me across<br>
+      the internet.
+    </h2>
+
+    <p class="section-description">
+      My public profiles and platforms, connected through one
+      central digital identity.
+    </p>
+
+    <div class="grid grid-3" style="margin-top:40px;">
+
+      <a class="card" href="https://www.youtube.com/@abdullah_al_zisan"
+         target="_blank" rel="noopener noreferrer">
+        <h3>YouTube</h3>
+        <p style="color:#9ca5b1;margin-top:8px;">
+          Videos & content
+        </p>
+      </a>
+
+      <a class="card" href="https://www.instagram.com/abdullah_al_zisan_1/"
+         target="_blank" rel="noopener noreferrer">
+        <h3>Instagram</h3>
+        <p style="color:#9ca5b1;margin-top:8px;">
+          Photos & updates
+        </p>
+      </a>
+
+      <a class="card" href="https://www.tiktok.com/@abdullah_al_zisan"
+         target="_blank" rel="noopener noreferrer">
+        <h3>TikTok</h3>
+        <p style="color:#9ca5b1;margin-top:8px;">
+          Short-form content
+        </p>
+      </a>
+
+      <a class="card" href="https://x.com/AbdullahAlZisan"
+         target="_blank" rel="noopener noreferrer">
+        <h3>X</h3>
+        <p style="color:#9ca5b1;margin-top:8px;">
+          Thoughts & updates
+        </p>
+      </a>
+
+      <a class="card"
+         href="https://www.linkedin.com/in/abdullah-al-zisan-aa14b23b4"
+         target="_blank" rel="noopener noreferrer">
+        <h3>LinkedIn</h3>
+        <p style="color:#9ca5b1;margin-top:8px;">
+          Professional profile
+        </p>
+      </a>
+
+      <a class="card"
+         href="https://www.facebook.com/share/1JkTGhPVZy/"
+         target="_blank" rel="noopener noreferrer">
+        <h3>Facebook</h3>
+        <p style="color:#9ca5b1;margin-top:8px;">
+          Social profile
+        </p>
+      </a>
+
+      <a class="card"
+         href="https://github.com/abdullahalzisan"
+         target="_blank" rel="noopener noreferrer">
+        <h3>GitHub</h3>
+        <p style="color:#9ca5b1;margin-top:8px;">
+          Code & projects
+        </p>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="projects">
+  <div class="container">
+
+    <div class="section-label">Projects & Learning</div>
+
+    <h2 class="section-title">
+      From learning<br>
+      to building.
+    </h2>
+
+    <p class="section-description">
+      I believe the best way to understand technology is to
+      experiment with it, build projects and learn through
+      practical experience.
+    </p>
+
+    <div class="grid grid-2" style="margin-top:40px;">
+
+      <div class="card">
+        <h3>Software & Programming</h3>
+        <p style="color:#9ca5b1;margin-top:10px;">
+          Exploring programming concepts and experimenting with
+          software projects as part of my ongoing learning journey.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>AI Exploration</h3>
+        <p style="color:#9ca5b1;margin-top:10px;">
+          Learning how modern AI systems work and discovering
+          practical ways to use artificial intelligence.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Future Technology</h3>
+        <p style="color:#9ca5b1;margin-top:10px;">
+          Exploring areas such as robotics, virtual reality,
+          intelligent systems and emerging technologies.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Entrepreneurship</h3>
+        <p style="color:#9ca5b1;margin-top:10px;">
+          Studying business, markets, product development and
+          the principles behind building technology companies.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="vision">
+  <div class="container">
+
+    <div class="section-label">Vision</div>
+
+    <h2 class="section-title">
+      Learn deeply.<br>
+      Build boldly.
+    </h2>
+
+    <div class="card" style="margin-top:35px;">
+
+      <p style="color:#b8c0ca;font-size:18px;max-width:800px;">
+        The future belongs to people who can learn continuously,
+        think independently and create useful things.
+        My long-term goal is to keep developing my knowledge,
+        technical skills and entrepreneurial mindset while
+        building something meaningful.
+      </p>
+
+      <p style="color:#8e98a5;margin-top:20px;">
+        This website is a small beginning of that journey.
+      </p>
+
+    </div>
+
+  </div>
+</section><section id="contact">
+  <div class="container">
+
+    <div class="section-label">Contact</div>
+
+    <h2 class="section-title">
+      Let’s connect.
+    </h2>
+
+    <p class="section-description">
+      For professional connections, collaborations or simply
+      finding my public profiles, you can reach me through the
+      platforms below.
+    </p>
+
+    <div class="buttons" style="margin-top:30px;">
+
+      <a href="https://www.linkedin.com/in/abdullah-al-zisan-aa14b23b4"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-primary">
+        LinkedIn →
+      </a>
+
+      <a href="https://x.com/AbdullahAlZisan"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-secondary">
+        X →
+      </a>
+
+      <a href="https://github.com/abdullahalzisan"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-secondary">
+        GitHub →
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+
+<footer style="
+  border-top:1px solid rgba(255,255,255,.07);
+  padding:35px 0;
+">
+
+  <div class="container">
+
+    <div style="
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+    ">
+
+      <div>
+        <strong>Abdullah Al Zisan</strong>
+
+        <p style="
+          color:#737c88;
+          font-size:13px;
+          margin-top:5px;
+        ">
+          Personal website & digital identity.
+        </p>
+      </div>
+
+      <div style="
+        color:#737c88;
+        font-size:13px;
+      ">
+        © <span id="year"></span> Abdullah Al Zisan
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
