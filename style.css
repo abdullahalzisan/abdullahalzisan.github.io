@@ -626,6 +626,82 @@ footer p{ font-size: 0.85rem; color: var(--text-faint); }
 }
 .to-top:hover{ color: var(--accent); }
 
+
+/* ---------- Stable animation layer ---------- */
+
+/* Keep the constellation visible after its entrance animation completes. */
+.const-link,
+.const-node,
+.const-dot,
+.const-label{
+  animation-fill-mode: both;
+}
+
+.mark-wrap{
+  transform: translateZ(0);
+}
+
+@keyframes markFloat{
+  0%{ transform: translate3d(0,0,0) rotate(0deg); }
+  100%{ transform: translate3d(0,-8px,0) rotate(0.6deg); }
+}
+
+@media (hover:hover) and (pointer:fine){
+  .mark-wrap{
+    animation:
+      riseIn 1s ease forwards 0.2s,
+      markFloat 6s ease-in-out 1.3s infinite alternate;
+  }
+}
+
+.portrait img{
+  transition:
+    transform 0.7s cubic-bezier(.2,.8,.2,1),
+    filter 0.4s ease;
+  will-change: transform;
+}
+
+.portrait:hover img{
+  transform: translate3d(0,-6px,0) scale(1.018);
+  filter: grayscale(15%) contrast(1.06);
+}
+
+/* Elements added to this class by script.js reveal smoothly on scroll. */
+.js-reveal{
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(.2,.8,.2,1);
+}
+
+.js-reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.js-reveal:nth-child(2){ transition-delay: .06s; }
+.js-reveal:nth-child(3){ transition-delay: .12s; }
+.js-reveal:nth-child(4){ transition-delay: .18s; }
+.js-reveal:nth-child(5){ transition-delay: .24s; }
+.js-reveal:nth-child(6){ transition-delay: .30s; }
+.js-reveal:nth-child(7){ transition-delay: .36s; }
+
+@media (prefers-reduced-motion: reduce){
+  .mark-wrap{
+    animation: none !important;
+    transform: none !important;
+  }
+  .js-reveal{
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .portrait img{
+    transition: none !important;
+  }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 980px){
   .hero-grid{ grid-template-columns: 1fr; }
@@ -667,5 +743,5 @@ footer p{ font-size: 0.85rem; color: var(--text-faint); }
     scroll-behavior: auto !important;
   }
   .hero h1 .line span{ transform: none; }
-}
-
+    }
+   
