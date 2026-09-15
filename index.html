@@ -3,12 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080a0f">
 <title>Abdullah Al Zisan | Personal Website</title>
 <meta name="description" content="Official personal website of Abdullah Al Zisan — exploring AI, technology, science, software, business and the future.">
 <meta name="author" content="Abdullah Al Zisan">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0a0d12">
 <link rel="canonical" href="https://abdullahalzisan.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Abdullah Al Zisan | Personal Website">
+<meta property="og:description" content="The official personal website and digital identity of Abdullah Al Zisan.">
+<meta property="og:url" content="https://abdullahalzisan.github.io/">
+<meta property="og:site_name" content="Abdullah Al Zisan">
+<meta property="og:image" content="https://abdullahalzisan.github.io/profile.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Abdullah Al Zisan | Personal Website">
+<meta name="twitter:description" content="The official personal website and digital identity of Abdullah Al Zisan.">
+<meta name="twitter:image" content="https://abdullahalzisan.github.io/profile.jpg">
+
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -18,7 +31,8 @@
       "@id":"https://abdullahalzisan.github.io/#profile",
       "url":"https://abdullahalzisan.github.io/",
       "name":"Abdullah Al Zisan | Personal Website",
-      "mainEntity":{"@id":"https://abdullahalzisan.github.io/#person"}
+      "isPartOf":{"@id":"https://abdullahalzisan.github.io/#website"},
+      "about":{"@id":"https://abdullahalzisan.github.io/#person"}
     },
     {
       "@type":"Person",
@@ -27,7 +41,6 @@
       "alternateName":"Zisan",
       "url":"https://abdullahalzisan.github.io/",
       "image":"https://abdullahalzisan.github.io/profile.jpg",
-      "description":"Student and technology enthusiast exploring AI, technology, science, software, business and the future.",
       "sameAs":[
         "https://www.youtube.com/@abdullah_al_zisan",
         "https://www.instagram.com/abdullah_al_zisan_1/",
@@ -43,301 +56,883 @@
       "@id":"https://abdullahalzisan.github.io/#website",
       "url":"https://abdullahalzisan.github.io/",
       "name":"Abdullah Al Zisan",
-      "publisher":{"@id":"https://abdullahalzisan.github.io/#person"}
+      "description":"Personal website and digital identity of Abdullah Al Zisan."
     }
   ]
 }
 </script>
-<link rel="preload" as="image" href="profile.jpg" fetchpriority="high">
 
+<style>
+:root{
+  --bg:#080a0f;--panel:#0d1118;--panel2:#111722;--line:#202734;
+  --text:#f1f3f6;--muted:#929aaa;--faint:#697282;--gold:#d9a84f;
+  --blue:#7397ba;--max:1160px;--edge:clamp(22px,5vw,70px);
+  --display:Georgia,"Times New Roman",serif;
+  --body:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --mono:"Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--body);line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:10;
+  opacity:.028;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(var(--max),calc(100% - var(--edge)*2));margin:auto}
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:20;
+  background:rgba(8,10,15,.78);backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.06)
+}
+.nav-inner{
+  max-width:var(--max);margin:auto;padding:17px var(--edge);
+  display:flex;align-items:center;justify-content:space-between
+}
+.logo{font:1.1rem var(--display);letter-spacing:.04em}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:26px;font-size:.78rem;color:var(--muted)}
+.nav-links a{transition:color .25s ease}
+.nav-links a:hover,.nav-links a.active{color:var(--text)}
+.menu{
+  display:none;border:1px solid var(--line);background:transparent;
+  color:var(--text);padding:7px 10px;border-radius:8px
+}
+.hero{
+  min-height:100vh;display:grid;place-items:center;
+  padding:130px var(--edge) 80px;position:relative;overflow:hidden
+}
+.hero:after{
+  content:"";position:absolute;width:620px;height:620px;border-radius:50%;
+  background:radial-gradient(circle,rgba(115,151,186,.12),transparent 68%);
+  filter:blur(12px);animation:glow 7s ease-in-out infinite;
+  pointer-events:none
+}
+.hero-grid{
+  max-width:var(--max);width:100%;display:grid;
+  grid-template-columns:1.1fr .9fr;gap:70px;align-items:center;position:relative;z-index:1
+}
+.eyebrow,.tag{
+  color:var(--gold);font-family:var(--mono);font-size:.7rem;
+  letter-spacing:.2em;text-transform:uppercase
+}
+.eyebrow{margin-bottom:18px}
+h1{
+  font:clamp(3.5rem,8vw,7.8rem)/.9 var(--display);
+  font-weight:400;letter-spacing:-.045em;margin:0
+}
+h1 em{font-style:italic;color:#c9d1dc}
+.hero-copy{max-width:670px;margin-top:30px;color:var(--muted);font-size:1rem}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  padding:11px 17px;border:1px solid var(--line);border-radius:999px;
+  font-size:.8rem;transition:transform .25s ease,border-color .25s ease,background .25s ease
+}
+.btn:hover{transform:translateY(-2px);border-color:#485264;background:rgba(255,255,255,.03)}
+.btn.primary{border-color:#67512c;color:#f2d59c}.orbit-wrap{
+  width:min(390px,75vw);aspect-ratio:1;
+  margin:auto;position:relative;
+  animation:float 6s ease-in-out infinite
+}
+.orbit{
+  position:absolute;inset:0;border-radius:50%;
+  border:1px solid rgba(115,151,186,.18)
+}
+.orbit:before,.orbit:after{
+  content:"";position:absolute;inset:9%;
+  border:1px solid rgba(217,168,79,.14);
+  border-radius:50%;
+  animation:spin 24s linear infinite
+}
+.orbit:after{
+  inset:20%;border-color:rgba(115,151,186,.13);
+  animation:spinReverse 18s linear infinite
+}
+.constellation{
+  position:absolute;inset:12%;width:76%;height:76%;
+  overflow:visible
+}
+.const-line{
+  stroke:rgba(115,151,186,.4);
+  stroke-width:1;fill:none
+}
+.const-dot{
+  fill:#d9a84f;
+  transform-box:fill-box;transform-origin:center;
+  animation:pulse 2.4s ease-in-out infinite
+}
+.const-dot:nth-of-type(2){animation-delay:.35s}
+.const-dot:nth-of-type(3){animation-delay:.7s}
+.const-dot:nth-of-type(4){animation-delay:1.05s}
+.const-dot:nth-of-type(5){animation-delay:1.4s}
+.const-dot:nth-of-type(6){animation-delay:1.75s}
+.center-ring{
+  fill:none;stroke:rgba(217,168,79,.7);stroke-width:1.2;
+  transform-box:fill-box;transform-origin:center;
+  animation:centerPulse 3s ease-in-out infinite
+}
+.center-text{
+  fill:var(--text);font:600 17px var(--body);
+  letter-spacing:.08em
+}
+.hero-meta{
+  display:flex;gap:28px;margin-top:45px;
+  color:var(--faint);font-size:.7rem;text-transform:uppercase;
+  letter-spacing:.12em
+}
+.hero-meta strong{display:block;color:var(--text);font-size:.78rem;margin-bottom:3px}
+section{padding:120px 0;border-top:1px solid var(--line)}
+.section-head{
+  display:flex;justify-content:space-between;gap:30px;
+  align-items:end;margin-bottom:55px
+}
+.title{
+  font:clamp(2.3rem,5vw,4.5rem)/1 var(--display);
+  font-weight:400;letter-spacing:-.035em;margin:8px 0 0
+}
+.note{max-width:400px;color:var(--muted);font-size:.9rem}
+.about-grid{
+  display:grid;grid-template-columns:1fr .8fr;
+  gap:80px;align-items:center
+}
+.body{color:var(--muted);font-size:1rem;max-width:680px}
+.traits{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.traits span{
+  border:1px solid var(--line);padding:8px 12px;border-radius:999px;
+  color:var(--muted);font-size:.72rem
+}
+.portrait-card{
+  max-width:310px;justify-self:end;position:relative;
+  padding:12px;border:1px solid var(--line);
+  background:linear-gradient(145deg,#121823,#0a0d13);
+  box-shadow:0 20px 70px rgba(0,0,0,.35);
+  animation:photoFloat 7s ease-in-out infinite
+}
+.portrait-card:before{
+  content:"";position:absolute;inset:-7px 7px 7px -7px;
+  border:1px solid rgba(217,168,79,.22);z-index:-1
+}
+.portrait-card img{
+  display:block;width:100%;height:auto;aspect-ratio:3/4;
+  object-fit:cover;object-position:center top
+}
+.focus-list{border-top:1px solid var(--line)}
+.row{
+  display:grid;grid-template-columns:.45fr 1.2fr .7fr;
+  gap:25px;padding:30px 0;border-bottom:1px solid var(--line);
+  align-items:center
+}
+.row .domain{color:var(--gold);font: .7rem var(--mono);text-transform:uppercase;letter-spacing:.15em}
+.row h3{font:1.45rem var(--display);font-weight:400;margin:0}
+.row p{color:var(--muted);font-size:.82rem;margin:0}.identity{
+  display:grid;grid-template-columns:.7fr 1.3fr;
+  gap:80px
+}
+.identity-number{
+  font:clamp(5rem,12vw,10rem)/.8 var(--display);
+  color:#171d27;letter-spacing:-.08em
+}
+.identity-copy p{color:var(--muted);max-width:700px}
+.identity-points{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1px;background:var(--line);margin-top:35px
+}
+.identity-point{
+  background:var(--bg);padding:25px
+}
+.identity-point small{
+  color:var(--gold);font: .65rem var(--mono);
+  text-transform:uppercase;letter-spacing:.15em
+}
+.identity-point strong{
+  display:block;font:1.1rem var(--display);
+  font-weight:400;margin-top:8px
+}
+.social-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);border-left:1px solid var(--line)
+}
+.social{
+  padding:25px;border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);min-height:135px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  transition:background .25s ease,transform .25s ease
+}
+.social:hover{background:var(--panel);transform:translateY(-3px)}
+.social-name{font:1.25rem var(--display)}
+.social-handle{font-size:.7rem;color:var(--muted)}
+.social-arrow{align-self:flex-end;color:var(--gold)}
+.projects{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:18px
+}
+.project{
+  border:1px solid var(--line);background:var(--panel);
+  padding:30px;min-height:250px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  transition:transform .3s ease,border-color .3s ease
+}
+.project:hover{transform:translateY(-5px);border-color:#394252}
+.project-top{
+  display:flex;justify-content:space-between;gap:15px
+}
+.project-index{color:var(--gold);font: .68rem var(--mono)}
+.project h3{
+  font:2rem var(--display);font-weight:400;margin:30px 0 10px
+}
+.project p{color:var(--muted);font-size:.82rem;margin:0}
+.project-tags{
+  display:flex;gap:7px;flex-wrap:wrap;margin-top:25px
+}
+.project-tags span{
+  font: .62rem var(--mono);color:var(--faint);
+  border:1px solid var(--line);padding:5px 8px
+}
+.vision{
+  min-height:70vh;display:grid;place-items:center;text-align:center;
+  position:relative;overflow:hidden
+}
+.vision h2{
+  max-width:950px;font:clamp(3rem,7vw,7rem)/.94 var(--display);
+  font-weight:400;letter-spacing:-.045em;margin:15px auto
+}
+.vision p{
+  color:var(--muted);max-width:600px;margin:25px auto
+}
+.contact{padding-bottom:80px}
+.contact h2{
+  font:clamp(3rem,7vw,6.5rem)/.95 var(--display);
+  font-weight:400;letter-spacing:-.04em;margin:10px 0 25px
+}
+.contact p{color:var(--muted);max-width:560px}
+.contact-links{
+  display:flex;gap:20px;flex-wrap:wrap;margin-top:30px
+}
+.contact-links a{
+  border-bottom:1px solid #3a424f;padding-bottom:4px;
+  font-size:.8rem;color:#d9dde4
+}
+footer{
+  border-top:1px solid var(--line);padding:35px var(--edge);
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  color:var(--faint);font-size:.82rem
+}
+.footer-name{color:var(--text);font:1rem var(--display)}
 
-<meta property="og:type" content="profile">
-<meta property="og:site_name" content="Abdullah Al Zisan">
-<meta property="og:title" content="Abdullah Al Zisan | Personal Website">
-<meta property="og:description" content="The official personal website and digital identity of Abdullah Al Zisan.">
-<meta property="og:image" content="https://abdullahalzisan.github.io/profile.jpg">
-<meta property="og:url" content="https://abdullahalzisan.github.io/">
+.reveal{
+  opacity:0;transform:translateY(24px);
+  transition:opacity .75s ease,transform .75s ease
+}
+.reveal.show{opacity:1;transform:none}
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Abdullah Al Zisan">
-<meta name="twitter:description" content="Personal website and digital identity of Abdullah Al Zisan.">
-<meta name="twitter:image" content="https://abdullahalzisan.github.io/profile.jpg">
+@keyframes up{
+  to{opacity:1;transform:none}
+}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+@keyframes photoFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-5px)}
+}
+@keyframes pulse{
+  0%,100%{opacity:.45;transform:scale(.82)}
+  50%{opacity:1;transform:scale(1.35)}
+}
+@keyframes centerPulse{
+  0%,100%{stroke-opacity:.65;transform:scale(1)}
+  50%{stroke-opacity:1;transform:scale(1.025)}
+}
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
+@keyframes spinReverse{
+  to{transform:rotate(-360deg)}
+}
+@keyframes glow{
+  0%,100%{transform:scale(1);opacity:.8}
+  50%{transform:scale(1.12);opacity:1}
+  }@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:55px}
+  .hero-art{order:-1}
+  .orbit-wrap{width:min(310px,70vw)}
+  .about-grid{grid-template-columns:1fr;gap:50px}
+  .portrait-card{justify-self:start;max-width:280px}
+  .identity{grid-template-columns:1fr;gap:30px}
+  .identity-number{font-size:6rem}
+  .social-grid{grid-template-columns:repeat(2,1fr)}
+  .row{grid-template-columns:1fr;gap:8px}
+  .row p{max-width:650px}
+}
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230a0d12'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='56' fill='%23e3ae55' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+@media(max-width:650px){
+  :root{--edge:20px}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:65px;
+    left:var(--edge);
+    right:var(--edge);
+    background:rgba(13,17,24,.97);
+    border:1px solid var(--line);
+    padding:12px;
+    flex-direction:column;
+    gap:0
+  }
 
-<link rel="stylesheet" href="style.css?v=20260915">
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 10px}
+  .menu{display:block}
+
+  .hero{padding-top:115px}
+  h1{font-size:clamp(3.2rem,18vw,5rem)}
+  .hero-copy{font-size:.92rem}
+
+  .hero-meta{
+    gap:18px;
+    flex-wrap:wrap
+  }
+
+  section{padding:90px 0}
+  .section-head{
+    display:block;
+    margin-bottom:40px
+  }
+
+  .note{margin-top:18px}
+
+  .social-grid{
+    grid-template-columns:1fr 1fr
+  }
+
+  .social{
+    min-height:120px;
+    padding:18px
+  }
+
+  .projects{grid-template-columns:1fr}
+  .project{min-height:220px}
+
+  .identity-points{
+    grid-template-columns:1fr
+  }
+
+  .vision{min-height:60vh}
+
+  .vision h2{
+    font-size:clamp(2.8rem,14vw,5rem)
+  }
+
+  footer{
+    padding:28px var(--edge)
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+
+  *,
+  *:before,
+  *:after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important
+  }
+
+  .reveal{
+    opacity:1;
+    transform:none
+  }
+
+  .eyebrow{
+    animation:none!important
+  }
+}
+</style>
 </head>
+
 <body>
 
-<div class="noise" aria-hidden="true"></div>
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#home">AZ<span>.</span></a>
+    <button class="menu" id="menu" aria-label="Open navigation">Menu</button>
 
-<nav id="nav">
-  <a href="#home" class="brand">Abdullah Al <span>Zisan</span></a>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#about">About</a></li>
-    <li><a href="#focus">Focus</a></li>
-    <li><a href="#identity">Identity</a></li>
-    <li><a href="#social">Social</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <nav class="nav-links" id="links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#focus">Focus</a>
+      <a href="#identity">Identity</a>
+      <a href="#social">Social</a>
+      <a href="#projects">Projects</a>
+      <a href="#vision">Vision</a>
+    </nav>
+  </div>
+</header>
 
 <main>
 
-  <!-- ================= HERO ================= -->
-  <section id="home" class="hero">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="hero-eyebrow">Personal Website · Digital Identity</p>
-        <h1>
-          <span class="line"><span>Abdullah Al</span></span>
-          <span class="line"><span>Zisan</span></span>
-        </h1>
-        <p class="lede">Exploring artificial intelligence, technology, science, software, business and the ideas shaping the future.</p>
-        <div class="hero-actions">
-          <a href="#about" class="btn btn-primary">Explore My World <span class="arrow">→</span></a>
-          <a href="#social" class="btn btn-ghost">Find Me Online</a>
-        </div>
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">Personal Website · Digital Identity</div>
+      <h1>Abdullah<br><em>Al Zisan.</em></h1>
+
+      <p class="hero-copy">
+        Student. Technology enthusiast. Curious builder.
+        Exploring artificial intelligence, software, science, business and the ideas shaping tomorrow.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="#about">Explore my world ↓</a>
+        <a class="btn" href="#social">Find me online</a>
       </div>
 
-      <div class="mark-wrap">
-        <svg id="constellation" viewBox="0 0 560 560" role="img" aria-label="A diagram of one central identity connected to six fields of interest">
-          <g class="links">
-            <line class="const-link" pathLength="1" x1="280" y1="280" x2="280" y2="70" style="animation-delay:.55s"></line>
-            <line class="const-link" pathLength="1" x1="280" y1="280" x2="462" y2="175" style="animation-delay:.65s"></line>
-            <line class="const-link" pathLength="1" x1="280" y1="280" x2="462" y2="385" style="animation-delay:.75s"></line>
-            <line class="const-link" pathLength="1" x1="280" y1="280" x2="280" y2="490" style="animation-delay:.85s"></line>
-            <line class="const-link" pathLength="1" x1="280" y1="280" x2="98"  y2="385" style="animation-delay:.95s"></line>
-            <line class="const-link" pathLength="1" x1="280" y1="280" x2="98"  y2="175" style="animation-delay:1.05s"></line>
-          </g>
-          <g class="nodes">
-            <circle class="const-dot" cx="280" cy="70"  r="4" style="animation-delay:1.1s"></circle>
-            <circle class="const-dot" cx="462" cy="175" r="4" style="animation-delay:1.2s"></circle>
-            <circle class="const-dot" cx="462" cy="385" r="4" style="animation-delay:1.3s"></circle>
-            <circle class="const-dot" cx="280" cy="490" r="4" style="animation-delay:1.4s"></circle>
-            <circle class="const-dot" cx="98"  cy="385" r="4" style="animation-delay:1.5s"></circle>
-            <circle class="const-dot" cx="98"  cy="175" r="4" style="animation-delay:1.6s"></circle>
-            <circle class="const-node center" cx="280" cy="280" r="52" style="animation-delay:.35s"></circle>
-          </g>
-          <text class="const-label" x="280" y="287" text-anchor="middle" style="animation-delay:.7s">AZ</text>
+      <div class="hero-meta">
+        <div>
+          <strong>Zisan</strong>
+          Also known as
+        </div>
+
+        <div>
+          <strong>Bangladesh</strong>
+          Based in
+        </div>
+
+        <div>
+          <strong>Future-focused</strong>
+          Mindset
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="orbit-wrap">
+        <div class="orbit"></div>
+
+        <svg class="constellation" viewBox="0 0 300 300">
+          <line class="const-line" x1="45" y1="70" x2="120" y2="115"/>
+          <line class="const-line" x1="120" y1="115" x2="185" y2="55"/>
+          <line class="const-line" x1="185" y1="55" x2="245" y2="120"/>
+          <line class="const-line" x1="245" y1="120" x2="205" y2="215"/>
+          <line class="const-line" x1="205" y1="215" x2="95" y2="225"/>
+          <line class="const-line" x1="95" y1="225" x2="45" y2="70"/>
+          <line class="const-line" x1="120" y1="115" x2="205" y2="215"/>
+
+          <circle class="const-dot" cx="45" cy="70" r="4"/>
+          <circle class="const-dot" cx="120" cy="115" r="4"/>
+          <circle class="const-dot" cx="185" cy="55" r="4"/>
+          <circle class="const-dot" cx="245" cy="120" r="4"/>
+          <circle class="const-dot" cx="205" cy="215" r="4"/>
+          <circle class="const-dot" cx="95" cy="225" r="4"/>
+
+          <circle class="center-ring" cx="150" cy="150" r="43"/>
+          <text class="center-text" x="150" y="156" text-anchor="middle">AZ</text>
         </svg>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ================= ABOUT ================= -->
-  <section id="about" class="wrap">
+<section id="about">
+  <div class="container reveal">
     <div class="about-grid">
-      <div class="about-text">
-        <p class="section-tag">About</p>
-        <h2 class="section-title">Curiosity is where everything begins.</h2>
-        <p>I'm Abdullah Al Zisan, also known as Zisan. I'm a student and technology enthusiast interested in understanding how new ideas can become useful products, software and businesses.</p>
-        <div class="trait-flow">
+      <div>
+        <p class="tag">About</p>
+        <h2 class="title">Curiosity is where everything begins.</h2>
+
+        <p class="body" style="margin-top:22px">
+          I'm Abdullah Al Zisan, also known as Zisan. I'm a student and technology enthusiast interested in understanding how new ideas can become useful products, software and businesses.
+        </p>
+
+        <div class="traits">
           <span>Curious</span>
           <span>Learning</span>
           <span>Building</span>
           <span>Thinking long-term</span>
         </div>
       </div>
-      <div class="portrait">
-        <img src="profile.jpg" alt="Abdullah Al Zisan" width="260" height="320" loading="eager" fetchpriority="high" decoding="async">
+
+      <div class="portrait-card">
+        <img
+          src="profile.jpg"
+          alt="Abdullah Al Zisan"
+          width="750"
+          height="1000"
+          loading="eager"
+          fetchpriority="high">
       </div>
     </div>
-  </section>
-
-  <!-- ================= FOCUS ================= -->
-  <section id="focus" class="wrap">
+  </div>
+</section><section id="focus">
+  <div class="container reveal">
     <div class="section-head">
       <div>
-        <p class="section-tag">Areas of Interest</p>
-        <h2 class="section-title">What I'm exploring.</h2>
+        <p class="tag">Areas of Interest</p>
+        <h2 class="title">What I'm exploring.</h2>
       </div>
-      <p class="section-note">These are the fields currently shaping my learning and curiosity.</p>
+      <p class="note">
+        These are the fields currently shaping my learning and curiosity.
+      </p>
     </div>
 
     <div class="focus-list">
-      <div class="focus-row">
-        <div><span class="focus-domain">Intelligence</span><h3 class="focus-name">Artificial Intelligence</h3></div>
-        <p class="focus-desc">Exploring AI, machine learning, intelligent systems and the possibilities of advanced technology.</p>
+      <div class="row">
+        <div><span class="domain">Intelligence</span></div>
+        <div><h3>Artificial Intelligence</h3></div>
+        <div><p>AI systems, models, automation and the future of intelligent software.</p></div>
       </div>
-      <div class="focus-row">
-        <div><span class="focus-domain">Computing</span><h3 class="focus-name">Technology</h3></div>
-        <p class="focus-desc">Following software, computing, robotics, emerging technology and the systems behind them.</p>
+
+      <div class="row">
+        <div><span class="domain">Technology</span></div>
+        <div><h3>Software &amp; Technology</h3></div>
+        <div><p>Programming, digital products and emerging technologies.</p></div>
       </div>
-      <div class="focus-row">
-        <div><span class="focus-domain">Discovery</span><h3 class="focus-name">Science</h3></div>
-        <p class="focus-desc">Learning about science, space, discoveries and the questions that push human understanding forward.</p>
+
+      <div class="row">
+        <div><span class="domain">Science</span></div>
+        <div><h3>Science &amp; Space</h3></div>
+        <div><p>Discoveries, space exploration and understanding how the universe works.</p></div>
       </div>
-      <div class="focus-row">
-        <div><span class="focus-domain">Value</span><h3 class="focus-name">Business</h3></div>
-        <p class="focus-desc">Interested in entrepreneurship, markets, finance, strategy and building valuable products.</p>
-      </div>
-      <div class="focus-row">
-        <div><span class="focus-domain">Creation</span><h3 class="focus-name">Software</h3></div>
-        <p class="focus-desc">Learning programming and using code to turn ideas into practical experiments and experiences.</p>
-      </div>
-      <div class="focus-row">
-        <div><span class="focus-domain">Tomorrow</span><h3 class="focus-name">Future Tech</h3></div>
-        <p class="focus-desc">Thinking about robotics, virtual reality, intelligent systems and what the next decade could bring.</p>
+
+      <div class="row">
+        <div><span class="domain">Business</span></div>
+        <div><h3>Business &amp; Economics</h3></div>
+        <div><p>Entrepreneurship, markets, finance and long-term value creation.</p></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ================= IDENTITY ================= -->
-  <section id="identity">
-    <div class="identity-inner">
-      <p class="section-tag">Digital Identity</p>
-      <h2>One name. One digital identity.</h2>
-      <p>This website is the central hub for my public presence across the web, connecting my platforms under one consistent identity.</p>
-      <p class="identity-alias">Abdullah Al Zisan <span class="divider">/</span> Zisan</p>
-      <div class="identity-tags">
-        <span>AI</span>
-        <span>Technology</span>
-        <span>Science</span>
-        <span>Software</span>
-        <span>Business</span>
-        <span>Future</span>
-        <span>Learning</span>
+<section id="identity">
+  <div class="container reveal">
+    <div class="identity">
+      <div class="identity-number">01</div>
+
+      <div class="identity-copy">
+        <p class="tag">Digital Identity</p>
+        <h2 class="title">Learning today.<br>Building tomorrow.</h2>
+
+        <p>
+          This website is a central place for my public digital identity —
+          a simple record of what I am learning, building, exploring and thinking about.
+        </p>
+
+        <div class="identity-points">
+          <div class="identity-point">
+            <small>01 · Learn</small>
+            <strong>Understand ideas deeply</strong>
+          </div>
+
+          <div class="identity-point">
+            <small>02 · Build</small>
+            <strong>Turn knowledge into projects</strong>
+          </div>
+
+          <div class="identity-point">
+            <small>03 · Explore</small>
+            <strong>Follow emerging possibilities</strong>
+          </div>
+
+          <div class="identity-point">
+            <small>04 · Grow</small>
+            <strong>Think long-term</strong>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ================= SOCIAL ================= -->
-  <section id="social" class="wrap">
+<section id="social">
+  <div class="container reveal">
     <div class="section-head">
       <div>
-        <p class="section-tag">Social Presence</p>
-        <h2 class="section-title">Find me across the internet.</h2>
+        <p class="tag">Social Presence</p>
+        <h2 class="title">Find me online.</h2>
       </div>
-      <p class="section-note">My public profiles, gathered in one place.</p>
+      <p class="note">
+        My public profiles and places where I share, learn and build.
+      </p>
     </div>
 
     <div class="social-grid">
-      <a class="social-tile" href="https://www.youtube.com/@abdullah_al_zisan" target="_blank" rel="noopener">
-        <div class="social-top"><span class="social-mark">YT</span><span class="social-arrow">↗</span></div>
-        <div class="social-body"><span class="kind">Video</span><span class="platform">YouTube</span></div>
-      </a>
-      <a class="social-tile" href="https://www.instagram.com/abdullah_al_zisan_1/" target="_blank" rel="noopener">
-        <div class="social-top"><span class="social-mark">IG</span><span class="social-arrow">↗</span></div>
-        <div class="social-body"><span class="kind">Visual</span><span class="platform">Instagram</span></div>
-      </a>
-      <a class="social-tile" href="https://www.tiktok.com/@abdullah_al_zisan" target="_blank" rel="noopener">
-        <div class="social-top"><span class="social-mark">TT</span><span class="social-arrow">↗</span></div>
-        <div class="social-body"><span class="kind">Short-form</span><span class="platform">TikTok</span></div>
-      </a>
-      <a class="social-tile" href="https://x.com/AbdullahAlZisan" target="_blank" rel="noopener">
-        <div class="social-top"><span class="social-mark">X</span><span class="social-arrow">↗</span></div>
-        <div class="social-body"><span class="kind">Updates</span><span class="platform">X</span></div>
-      </a>
-      <a class="social-tile" href="https://www.linkedin.com/in/abdullah-al-zisan-aa14b23b4" target="_blank" rel="noopener">
-        <div class="social-top"><span class="social-mark">in</span><span class="social-arrow">↗</span></div>
-        <div class="social-body"><span class="kind">Professional</span><span class="platform">LinkedIn</span></div>
-      </a>
-      <a class="social-tile" href="https://www.facebook.com/abdullahalzisan117" target="_blank" rel="noopener">
-        <div class="social-top"><span class="social-mark">f</span><span class="social-arrow">↗</span></div>
-        <div class="social-body"><span class="kind">Social</span><span class="platform">Facebook</span></div>
-      </a>
-      <a class="social-tile" href="https://github.com/abdullahalzisan" target="_blank" rel="noopener">
-        <div class="social-top"><span class="social-mark">GH</span><span class="social-arrow">↗</span></div>
-        <div class="social-body"><span class="kind">Code</span><span class="platform">GitHub</span></div>
-      </a>
-    </div>
-  </section>
 
-  <!-- ================= PROJECTS ================= -->
-  <section id="projects" class="wrap">
+      <a class="social" href="https://www.youtube.com/@abdullah_al_zisan" target="_blank" rel="noopener noreferrer">
+        <div class="social-name">YouTube</div>
+        <div class="social-handle">@abdullah_al_zisan</div>
+        <div class="social-arrow">↗</div>
+      </a>
+
+      <a class="social" href="https://www.instagram.com/abdullah_al_zisan_1/" target="_blank" rel="noopener noreferrer">
+        <div class="social-name">Instagram</div>
+        <div class="social-handle">@abdullah_al_zisan_1</div>
+        <div class="social-arrow">↗</div>
+      </a>
+
+      <a class="social" href="https://www.tiktok.com/@abdullah_al_zisan" target="_blank" rel="noopener noreferrer">
+        <div class="social-name">TikTok</div>
+        <div class="social-handle">@abdullah_al_zisan</div>
+        <div class="social-arrow">↗</div>
+      </a>
+
+      <a class="social" href="https://x.com/AbdullahAlZisan" target="_blank" rel="noopener noreferrer">
+        <div class="social-name">X</div>
+        <div class="social-handle">@AbdullahAlZisan</div>
+        <div class="social-arrow">↗</div>
+      </a>
+
+      <a class="social" href="https://www.linkedin.com/in/abdullah-al-zisan-aa14b23b4" target="_blank" rel="noopener noreferrer">
+        <div class="social-name">LinkedIn</div>
+        <div class="social-handle">Abdullah Al Zisan</div>
+        <div class="social-arrow">↗</div>
+      </a>
+
+      <a class="social" href="https://www.facebook.com/abdullahalzisan117" target="_blank" rel="noopener noreferrer">
+        <div class="social-name">Facebook</div>
+        <div class="social-handle">Abdullah Al Zisan</div>
+        <div class="social-arrow">↗</div>
+      </a>
+
+      <a class="social" href="https://github.com/abdullahalzisan" target="_blank" rel="noopener noreferrer">
+        <div class="social-name">GitHub</div>
+        <div class="social-handle">@abdullahalzisan</div>
+        <div class="social-arrow">↗</div>
+      </a>
+
+    </div>
+  </div>
+</section><section id="projects">
+  <div class="container reveal">
     <div class="section-head">
       <div>
-        <p class="section-tag">Projects &amp; Learning</p>
-        <h2 class="section-title">From learning to building.</h2>
+        <p class="tag">Projects</p>
+        <h2 class="title">Things I've built.</h2>
       </div>
-      <p class="section-note">A few real experiments from my learning journey.</p>
+
+      <p class="note">
+        Small experiments and software projects created while learning.
+      </p>
     </div>
 
-    <div class="project-log">
-      <div class="project-entry">
-        <span class="project-id">EXP.01</span>
-        <div>
-          <span class="project-domain">Software · AI</span>
-          <h3 class="project-title">JARVIS — Local Chatbot</h3>
-          <p class="project-desc">An offline personal chatbot experiment built to explore commands, learning and persistent local interaction.</p>
-        </div>
-        <div class="project-tags"><span>Python</span><span>Offline</span><span>AI</span></div>
-      </div>
+    <div class="projects">
 
-      <div class="project-entry">
-        <span class="project-id">EXP.02</span>
+      <article class="project">
         <div>
-          <span class="project-domain">Game Development</span>
-          <h3 class="project-title">Survival Game</h3>
-          <p class="project-desc">A mobile-friendly game experiment with touch controls, created while learning interactive programming and game logic.</p>
-        </div>
-        <div class="project-tags"><span>Python</span><span>Game</span><span>Mobile</span></div>
-      </div>
+          <div class="project-top">
+            <span class="project-index">01</span>
+            <span class="project-index">LOCAL SOFTWARE</span>
+          </div>
 
-      <div class="project-entry">
-        <span class="project-id">EXP.03</span>
-        <div>
-          <span class="project-domain">Puzzle · Graphics</span>
-          <h3 class="project-title">Image Puzzle Game</h3>
-          <p class="project-desc">A puzzle experiment based on splitting an image into pieces and rebuilding it through interaction.</p>
-        </div>
-        <div class="project-tags"><span>Python</span><span>Puzzle</span><span>Graphics</span></div>
-      </div>
+          <h3>JARVIS</h3>
 
-      <div class="project-entry">
-        <span class="project-id">EXP.04</span>
-        <div>
-          <span class="project-domain">Board Game · AI</span>
-          <h3 class="project-title">Offline Chess</h3>
-          <p class="project-desc">A planned mobile-friendly chess project exploring two-player play and human-versus-computer gameplay.</p>
+          <p>
+            A local chatbot project created to experiment with conversational
+            interfaces, commands and persistent learning.
+          </p>
         </div>
-        <div class="project-tags"><span>Python</span><span>Chess</span><span>AI</span></div>
-      </div>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>AI</span>
+          <span>Chatbot</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div>
+          <div class="project-top">
+            <span class="project-index">02</span>
+            <span class="project-index">GAME</span>
+          </div>
+
+          <h3>Survival Game</h3>
+
+          <p>
+            A mobile-friendly survival game experiment focused on
+            interaction, controls and gameplay systems.
+          </p>
+        </div>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>Game</span>
+          <span>Mobile</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div>
+          <div class="project-top">
+            <span class="project-index">03</span>
+            <span class="project-index">PUZZLE</span>
+          </div>
+
+          <h3>Image Puzzle</h3>
+
+          <p>
+            An image-splitting puzzle game created as an experiment
+            with visual interaction and touch controls.
+          </p>
+        </div>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>Puzzle</span>
+          <span>Touch</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div>
+          <div class="project-top">
+            <span class="project-index">04</span>
+            <span class="project-index">PLANNED</span>
+          </div>
+
+          <h3>Offline Chess</h3>
+
+          <p>
+            A mobile-friendly offline chess project designed for
+            two players or a player versus computer.
+          </p>
+        </div>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>Chess</span>
+          <span>AI</span>
+        </div>
+      </article>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ================= VISION ================= -->
-  <section id="vision" class="wrap">
-    <div class="vision-inner">
-      <p class="section-tag">Vision</p>
-      <p class="vision-quote">I believe long-term progress comes from learning continuously, thinking independently and building useful things — while creating something meaningful.</p>
-      <p class="vision-sub">This website is one small beginning of that journey.</p>
-    </div>
-  </section>
+<section id="vision" class="vision">
+  <div class="container reveal">
+    <p class="tag">Vision</p>
 
-  <!-- ================= CONTACT ================= -->
-  <section id="contact" class="wrap">
-    <p class="section-tag">Contact</p>
+    <h2>
+      Don't just watch the future.
+      <em>Build a piece of it.</em>
+    </h2>
+
+    <p>
+      I'm still at the beginning of the journey.
+      The goal is to keep learning, keep building and keep asking better questions.
+    </p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container reveal">
+    <p class="tag">Contact</p>
+
     <h2>Let's connect.</h2>
-    <p>For professional connections, collaborations or simply finding my public profiles, you can reach me through the platforms below.</p>
+
+    <p>
+      For professional connections, collaborations or simply finding my public profiles,
+      you can reach me through the platforms below.
+    </p>
+
     <div class="contact-links">
-      <a href="https://www.linkedin.com/in/abdullah-al-zisan-aa14b23b4" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://x.com/AbdullahAlZisan" target="_blank" rel="noopener">X</a>
-      <a href="https://github.com/abdullahalzisan" target="_blank" rel="noopener">GitHub</a>
+      <a
+        href="https://www.linkedin.com/in/abdullah-al-zisan-aa14b23b4"
+        target="_blank"
+        rel="noopener noreferrer">LinkedIn</a>
+
+      <a
+        href="https://x.com/AbdullahAlZisan"
+        target="_blank"
+        rel="noopener noreferrer">X</a>
+
+      <a
+        href="https://github.com/abdullahalzisan"
+        target="_blank"
+        rel="noopener noreferrer">GitHub</a>
     </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
 <footer>
-  <div class="footer-brand">
-    <span class="footer-mark">Z</span>
-    <p>Abdullah Al Zisan — Personal website &amp; digital identity.</p>
-  </div>
-  <p id="year">© Abdullah Al Zisan</p>
-  <a href="#home" class="to-top">Back to top ↑</a>
+  <div class="footer-name">Abdullah Al Zisan</div>
+  <div>Personal website &amp; digital identity.</div>
+  <a href="#home">Back to top ↑</a>
 </footer>
 
-<script src="script.js?v=20260915" defer></script>
+<script>
+(function(){
+
+  const nav = document.getElementById("nav");
+  const menu = document.getElementById("menu");
+  const links = document.getElementById("links");
+
+  const navLinks = [...links.querySelectorAll("a")];
+  const sections = [...document.querySelectorAll("main section[id]")];
+
+  menu.addEventListener("click", function(){
+    links.classList.toggle("open");
+  });
+
+  navLinks.forEach(function(link){
+    link.addEventListener("click", function(){
+      links.classList.remove("open");
+    });
+  });
+
+  const observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+    });
+  },{
+    threshold:.12
+  });
+
+  document.querySelectorAll(".reveal").forEach(function(el){
+    observer.observe(el);
+  });
+
+  const sectionObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        navLinks.forEach(function(link){
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === "#" + entry.target.id
+          );
+        });
+      }
+    });
+  },{
+    rootMargin:"-35% 0px -55% 0px",
+    threshold:0
+  });
+
+  sections.forEach(function(section){
+    sectionObserver.observe(section);
+  });
+
+  if(!("IntersectionObserver" in window)){
+    document.querySelectorAll(".reveal").forEach(function(el){
+      el.classList.add("show");
+    });
+  }
+
+})();
+</script>
+
 </body>
-                                                          </html>
-            
+</html>
