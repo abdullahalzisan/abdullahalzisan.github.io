@@ -609,14 +609,18 @@ footer{
 }
 .footer-brand{ display: flex; align-items: center; gap: 10px; }
 .footer-mark{
-  width: 26px; height: 26px;
+  min-width: 38px;
+  height: 26px;
+  padding: 0 6px;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-display);
-  font-size: 0.75rem;
-  color: var(--accent);
-}
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+     }
 footer p{ font-size: 0.85rem; color: var(--text-faint); }
 .to-top{
   font-size: 0.85rem;
