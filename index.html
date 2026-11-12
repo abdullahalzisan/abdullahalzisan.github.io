@@ -878,20 +878,17 @@ html:not(.js) .reveal {
         rel="noopener noreferrer">GitHub</a>
     </div>
   </div>
-</section>
 
-
+<script>
 (function () {
   "use strict";
 
-  // Enable progressive enhancement.
   document.documentElement.classList.add("js");
 
   const nav = document.getElementById("nav");
   const menu = document.getElementById("menu");
   const links = document.getElementById("links");
 
-  // Prevent errors if navigation elements are missing.
   if (!nav || !menu || !links) return;
 
   const navLinks = Array.from(links.querySelectorAll("a"));
@@ -900,7 +897,7 @@ html:not(.js) .reveal {
   );
   const revealElements = document.querySelectorAll(".reveal");
 
-  // Mobile navigation state.
+  // Mobile navigation
   function setMenuOpen(open) {
     links.classList.toggle("open", open);
 
@@ -920,14 +917,12 @@ html:not(.js) .reveal {
     setMenuOpen(!isOpen);
   });
 
-  // Close menu after selecting a navigation link.
   navLinks.forEach(function (link) {
     link.addEventListener("click", function () {
       setMenuOpen(false);
     });
   });
 
-  // Close menu using Escape.
   document.addEventListener("keydown", function (event) {
     if (
       event.key === "Escape" &&
@@ -938,7 +933,6 @@ html:not(.js) .reveal {
     }
   });
 
-  // Close menu when clicking outside navigation.
   document.addEventListener("click", function (event) {
     if (
       menu.getAttribute("aria-expanded") === "true" &&
@@ -948,7 +942,7 @@ html:not(.js) .reveal {
     }
   });
 
-  // Scroll reveal and active navigation.
+  // Scroll reveal and navigation observer
   if ("IntersectionObserver" in window) {
 
     const revealObserver = new IntersectionObserver(
@@ -995,18 +989,17 @@ html:not(.js) .reveal {
     });
 
   } else {
-    // Older browser fallback: never hide page content.
+
+    // Fallback for older browsers
     revealElements.forEach(function (element) {
       element.classList.add("show");
     });
-  }
-})();
 
-  if(!("IntersectionObserver" in window)){
-    document.querySelectorAll(".reveal").forEach(function(el){
-      el.classList.add("show");
-    });
   }
+
+})();
+</script>
+
 
 })();
 </script>
