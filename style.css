@@ -673,12 +673,10 @@ footer p{ font-size: 0.85rem; color: var(--text-faint); }
 }
 
 /* Elements added to this class by script.js reveal smoothly on scroll. */
-.js-reveal{
-  opacity: 0;
-  transform: translateY(26px);
-  transition:
-    opacity 0.75s ease,
-    transform 0.75s cubic-bezier(.2,.8,.2,1);
+/* Keep content visible when JavaScript is disabled. */
+html:not(.js) .reveal {
+  opacity: 1;
+  transform: none;
 }
 
 .js-reveal.is-visible{
