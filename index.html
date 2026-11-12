@@ -335,7 +335,10 @@ footer{
   opacity:0;transform:translateY(24px);
   transition:opacity .75s ease,transform .75s ease
 }
-.reveal.show{opacity:1;transform:none}
+html:not(.js) .reveal {
+  opacity: 1;
+  transform: none;
+}
 
 @keyframes up{
   to{opacity:1;transform:none}
