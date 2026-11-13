@@ -919,6 +919,11 @@ html:not(.js) .reveal {
   "use strict";
 
   document.documentElement.classList.add("js");
+const copyrightYear = document.getElementById("copyright-year");
+
+if (copyrightYear) {
+  copyrightYear.textContent = new Date().getFullYear();
+}
 
   const nav = document.getElementById("nav");
   const menu = document.getElementById("menu");
