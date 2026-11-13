@@ -884,6 +884,20 @@ html:not(.js) .reveal {
   </div>
 
 <script>
+
+<footer class="site-footer">
+  <p>
+    © <span id="copyright-year">2026</span>
+    Abdullah Al Zisan. All Rights Reserved.
+  </p>
+  <p>Designed & Built by Zisan.</p>
+</footer>
+
+<script>
+  document.getElementById("copyright-year").textContent =
+    new Date().getFullYear();
+</script>
+
 (function () {
   "use strict";
 
